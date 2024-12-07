@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import createMDX from '@next/mdx';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withMDX = createMDX();
+
+const nextConfig = {
+  output: "export" as const,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: { unoptimized: true },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
