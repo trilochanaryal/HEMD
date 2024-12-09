@@ -1,28 +1,18 @@
 "use client";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import "leaflet-defaulticon-compatibility";
-import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 const ContactMap = () => {
-  const position: [number, number] = [50.8798, 4.7005]; // KU Leuven coordinates
+  const position = [50.8798, 4.7005];
+  const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=4.6905%2C50.8750%2C4.7105%2C50.8845&layer=mapnik&marker=${position[0]}%2C${position[1]}`;
 
-
-  
   return (
-    <MapContainer
-      center={position}
-      zoom={13}
-      style={{ height: "100%", width: "100%" }}
-    >
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={position}>
-        <Popup>KU Leuven</Popup>
-      </Marker>
-    </MapContainer>
+    <div style={{ height: "100%", width: "100%" }}>
+      <iframe
+        src={mapUrl}
+        style={{ border: 0, height: "100%", width: "100%" }}
+        allowFullScreen
+        title="Contact Map"
+      ></iframe>
+    </div>
   );
 };
 
