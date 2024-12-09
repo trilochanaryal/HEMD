@@ -1,58 +1,49 @@
 "use client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MapPin, Phone } from "lucide-react";
 import ContactMap from "./ContactMap";
 
-interface ContactInfo {
-  icon: JSX.Element;
-  title: string;
-  details: string[];
-}
-
-const contactInfo: ContactInfo[] = [
-  {
-    icon: <MapPin className="h-5 w-5 text-primary" />,
-    title: "Address",
-    details: ["KU Leuven", "Department of Engineering", "3000 Leuven, Belgium"],
+const location = {
+  name: "Research I",
+  lat: 53.167007,
+  lng: 8.648703,
+  addr: {
+    city: "Bremen",
+    country: "DE",
+    housenumber: "12",
+    postcode: "28759",
+    street: "Campus Ring",
   },
-  {
-    icon: <Mail className="h-5 w-5 text-primary" />,
-    title: "Email",
-    details: ["research@kuleuven.be", "admin@kuleuven.be"],
-  },
-  {
-    icon: <Phone className="h-5 w-5 text-primary" />,
-    title: "Phone",
-    details: ["+32 1234 5678", "+32 8765 4321"],
-  },
-];
+  building: "University",
+  buildingLevels: 2,
+  wheelchair: "official",
+};
 
 const ContactInfoCard = () => {
   return (
-    <Card className="w-full max-w-5xl mx-auto bg-background dark:bg-dark dark:text-white shadow-lg rounded-lg">
+    <Card className="w-full max-w-5xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-primary dark:text-grey-900">Contact Information</CardTitle>
+        <CardTitle className="text-xl font-bold">Contact Information</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information Column */}
           <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <div
-                key={index}
-                className="flex gap-3 items-start hover:bg-primary-light dark:hover:bg-primary-dark-light p-4 rounded-lg transition-colors duration-200"
-              >
-                {info.icon}
-                <div>
-                  <h2 className="font-semibold text-primary dark:text-grey-900">{info.title}</h2>
-                  <ul className="text-primary dark:text-grey-100">
-                    {info.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+            <div className="p-4  rounded-lg">
+              <h2 className="font-semibold text-lg mb-2">Address</h2>
+              <ul className="space-y-1">
+                <li className="text-sm">{`${location.addr.housenumber} ${location.addr.street}`}</li>
+                <li className="text-sm">{`${location.addr.postcode}, ${location.addr.city}`}</li>
+                <li className="text-sm">{`${location.addr.country}`}</li>
+              </ul>
+            </div>
+            <div className="p-4 rounded-lg">
+              <h2 className="font-semibold text-lg mb-2">Building Details</h2>
+              <ul className="space-y-1">
+                <li className="text-sm">{`Building: ${location.building}`}</li>
+                <li className="text-sm">{`Levels: ${location.buildingLevels}`}</li>
+                <li className="text-sm">{`Wheelchair Accessible: ${location.wheelchair}`}</li>
+              </ul>
+            </div>
           </div>
 
           {/* Map Column */}
