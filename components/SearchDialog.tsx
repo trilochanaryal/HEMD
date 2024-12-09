@@ -11,15 +11,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-
-const searchableContent = [
-  { title: "Quantum Computing Research", type: "Research", href: "#quantum" },
-  { title: "Advanced Materials Science", type: "Research", href: "#materials" },
-  { title: "Publications Archive", type: "Page", href: "#publications" },
-  { title: "Research Team", type: "Page", href: "#team" },
-  { title: "Contact Information", type: "Page", href: "#contact" },
-  { title: "Latest News", type: "Page", href: "#news" },
-];
+import { searchableContent } from "@/consts";
 
 export function SearchDialog() {
   const [open, setOpen] = useState(false);

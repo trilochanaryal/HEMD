@@ -1,41 +1,7 @@
-// components/Openings.tsx
-import React from 'react';
+"use client"
 
-const positions = [
-  {
-    type: 'PhD Position',
-    title: 'Space-Time Metamaterials (2 positions)',
-    description: [
-      'Research focus on novel space-time metamaterial designs',
-      'Strong background in electromagnetics required',
-      'Programming skills (Python, MATLAB) preferred',
-    ],
-    funding: 'Full funding for 4 years',
-    contactEmail: 'research@kuleuven.be',
-  },
-  {
-    type: 'PhD Position',
-    title: 'Quantum Metamaterials (1 position)',
-    description: [
-      'Focus on quantum effects in metamaterials',
-      'Background in quantum mechanics and electromagnetics',
-      'Computational skills required',
-    ],
-    funding: 'Full funding for 4 years',
-    contactEmail: 'research@kuleuven.be',
-  },
-  {
-    type: 'Postdoctoral Position',
-    title: 'Senior Researcher in Electromagnetic Theory',
-    description: [
-      '2-year position with possibility of extension',
-      'Leading research in theoretical electromagnetics',
-      'Publication track record required',
-      'Competitive salary package',
-    ],
-    contactEmail: 'research@kuleuven.be',
-  },
-];
+import React from 'react';
+import { positions } from '@/consts';
 
 const Openings = () => {
   return (

@@ -12,46 +12,8 @@ import {
 } from "@/components/ui/carousel"
 import { motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
-
-interface Slide {
-  id: number
-  title: string
-  description: string
-  image: string
-}
-
-const researchSlides: Slide[] = [
-  {
-    id: 1,
-    title: "Quantum Computing Research",
-    description: "Exploring the frontiers of quantum computation and its applications in cryptography.",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D",
-  },
-  {
-    id: 2,
-    title: "AI & Machine Learning",
-    description: "Pushing the boundaries of artificial intelligence and neural networks.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QUklMjBNYWNoaW5lJTIwTGVhcm5pbmd8ZW58MHx8MHx8fDA%3D",
-  },
-  {
-    id: 3,
-    title: "RF Design",
-    description: "Advanced radio frequency circuit design and optimization.",
-    image: "https://images.unsplash.com/photo-1580584126903-c17d41830450?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFkaW8lMjBmcmVxdWVuY3l8ZW58MHx8MHx8fDA%3D",
-  },
-  {
-    id: 4,
-    title: "High-Frequency Devices",
-    description: "Development of cutting-edge electromagnetic components.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxlY3RvbWFnbmV0aWN8ZW58MHx8MHx8fHww",
-  },
-  {
-    id: 5,
-    title: "Metasurfaces",
-    description: "Revolutionary electromagnetic wave manipulation techniques.",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cXVhbnR1bSUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D",
-  },
-]
+import { researchCarousel } from "@/consts"
+import {ResearchCarouselData} from "@/types"
 
 const ResearchCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -68,7 +30,7 @@ const ResearchCarousel = () => {
   return (
     <Carousel ref={emblaRef} className="w-full max-w-4xl mx-auto" opts={{ align: "start", loop: true }}>
       <CarouselContent>
-        {researchSlides.map((slide) => (
+        {researchCarousel.map((slide:ResearchCarouselData) => (
           <CarouselItem key={slide.id}>
             <Card className="overflow-hidden">
               <CardContent className="p-0">

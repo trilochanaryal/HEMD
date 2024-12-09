@@ -1,22 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
-
-const quotes = [
-  {
-    text: "Every block of stone has a statue inside it and it is the task of the sculptor to discover it.",
-    author: "Michelangelo",
-  },
-  {
-    text: "Research is to see what everybody else has seen, and to think what nobody else has thought.",
-    author: "Albert Szent-Györgyi",
-  },
-  {
-    text: "The important thing is not to stop questioning. Curiosity has its own reason for existence.",
-    author: "Albert Einstein",
-  },
-];
+import { quotes } from "@/consts";
 
 export function QuoteSection() {
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];

@@ -1,50 +1,7 @@
 import React from 'react';
-
-// Define the types for the links
-interface Link {
-  name: string;
-  url: string;
-}
-
-// Define the type for the usefulLinks object
-interface UsefulLinksData {
-  "Academic Resources": Link[];
-  "Research Tools": Link[];
-  "Professional Organizations": Link[];
-  "Partner Institutions": Link[];
-  "Funding Organizations": Link[];
-}
-
-// Define the usefulLinks object with the correct type
-const usefulLinks: UsefulLinksData = {
-  "Academic Resources": [
-    { name: "KU Leuven Libraries", url: "https://bib.kuleuven.be/english" },
-    { name: "IEEE Xplore Digital Library", url: "https://ieeexplore.ieee.org" },
-    { name: "Science Direct", url: "https://www.sciencedirect.com" },
-    { name: "arXiv", url: "https://arxiv.org" }
-  ],
-  "Research Tools": [
-    { name: "COMSOL Multiphysics", url: "https://www.comsol.com" },
-    { name: "MATLAB", url: "https://www.mathworks.com" },
-    { name: "CST Studio Suite", url: "https://www.3ds.com/products-services/simulia/products/cst-studio-suite" }
-  ],
-  "Professional Organizations": [
-    { name: "IEEE", url: "https://www.ieee.org" },
-    { name: "OSA - The Optical Society", url: "https://www.osa.org" },
-    { name: "SPIE", url: "https://spie.org" }
-  ],
-  "Partner Institutions": [
-    { name: "MIT", url: "https://www.mit.edu" },
-    { name: "ETH Zurich", url: "https://ethz.ch/en.html" },
-    { name: "Stanford University", url: "https://www.stanford.edu" },
-    { name: "Imperial College London", url: "https://www.imperial.ac.uk" }
-  ],
-  "Funding Organizations": [
-    { name: "European Research Council", url: "https://erc.europa.eu" },
-    { name: "FWO - Research Foundation Flanders", url: "https://www.fwo.be" },
-    { name: "Marie Skłodowska-Curie Actions", url: "https://ec.europa.eu/research/mariecurieactions" }
-  ]
-};
+import { usefulLinks } from '@/consts';
+import { UsefulLinksData } from '@/types';
+import { Link } from '@/types';
 
 const UsefulLinks: React.FC = () => {
   return (

@@ -8,19 +8,10 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { SearchDialog } from "./SearchDialog";
+import {navItems} from "@/consts"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navItems = [
-    { name: "Contact", href: "contact" },
-    { name: "Links", href: "links" },
-    { name: "Members", href: "members" },
-    { name: "Openings", href: "openings" },
-    { name: "Publications", href: "publications" },
-    { name: "Research", href: "research" },
-  ];
-
   return (
     <>
       <nav className="fixed w-full z-50 bg-white text-gray-900 dark:bg-black dark:text-white border-b border-gray-200 dark:border-gray-700">
