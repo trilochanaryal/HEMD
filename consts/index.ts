@@ -67,26 +67,31 @@ export const HeroImages = [
 
 export const research = [
   {
+    id:1,
     title: 'Advanced Electromagnetic Metamaterials',
     description: ' This research focuses on the development of advanced electromagnetic metamaterials that can manipulate light and electromagnetic waves in novel ways. These materials enable groundbreaking applications in communication, sensing, and energy harvesting.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8'
   },
   {
+    id:2,
     title: 'Quantum Computing for Electromagnetic Applications',
     description: 'Our research investigates the use of quantum computing techniques for simulating complex electromagnetic fields, pushing the limits of computational efficiency and accuracy.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8'
   },
   {
+    id:3,
     title: 'Wireless Power Transfer through Metamaterials',
     description: 'This project explores how electromagnetic metamaterials can enhance wireless power transfer systems, improving efficiency and reducing losses in applications like electric vehicle charging and IoT devices.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8'
   },
   {
+    id:4,
     title: 'Smart Antennas for 5G Networks',
     description: 'We are designing smart antennas optimized for 5G networks, which will provide enhanced coverage, reduced interference, and faster data transmission, paving the way for next-generation mobile communication.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8'
   },
   {
+    id:5,
     title: 'Metasurfaces for Medical Imaging',
     description: 'This research explores the use of electromagnetic metasurfaces to improve medical imaging techniques such as MRI and ultrasound, offering the potential for higher resolution and reduced scanning times.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8'
