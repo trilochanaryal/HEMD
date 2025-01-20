@@ -17,7 +17,6 @@ export interface Quote {
 }
 
 export interface ResearchProject {
-  objectives: any
   id: number
   title: string
   description: string
