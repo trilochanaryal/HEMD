@@ -1,12 +1,13 @@
-"use client";
+"use client"
 
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { HeroImages } from "@/consts";
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+import Link from "next/link"
+import { heroImages } from "@/consts"
 
-const getRandomImage = () => HeroImages[Math.floor(Math.random() * HeroImages.length)];
+const getRandomImage = () =>
+  heroImages[Math.floor(Math.random() * heroImages.length)]
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8}} 
+          transition={{ duration: 0.8 }}
           className="text-center motion-reduce:transition-none"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -29,7 +30,8 @@ const Hero = () => {
             and Metasurface Design
           </h1>
           <p className="text-xl sm:text-2xl lg:text-xl mb-8 text-gray-600 dark:text-gray-300">
-            Advancing the frontiers of RF technology and electromagnetic innovation
+            Advancing the frontiers of RF technology and electromagnetic
+            innovation
           </p>
           <Link href="/research">
             <Button
@@ -51,7 +53,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

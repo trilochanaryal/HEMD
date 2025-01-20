@@ -13,7 +13,7 @@ import {
 import { motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
 import { researchCarousel } from "@/consts"
-import {ResearchCarouselData} from "@/types"
+import {ResearchProject} from "@/types"
 
 const ResearchCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
@@ -30,7 +30,7 @@ const ResearchCarousel = () => {
   return (
     <Carousel ref={emblaRef} className="w-full max-w-4xl mx-auto" opts={{ align: "start", loop: true }}>
       <CarouselContent>
-        {researchCarousel.map((slide:ResearchCarouselData) => (
+        {researchCarousel.map((slide:ResearchProject) => (
           <CarouselItem key={slide.id}>
             <Card className="overflow-hidden">
               <CardContent className="p-0">
