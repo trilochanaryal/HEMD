@@ -297,6 +297,38 @@ export const researchDetails: ResearchDetail[] = [
       "Our research employs a combination of theoretical modeling, computer simulations, and experimental validation. We utilize state-of-the-art equipment and facilities to conduct our experiments and analyze results.",
     impact:
       "This research has the potential to revolutionize various fields, including telecommunications, medical imaging, and energy harvesting. Our findings contribute to the broader scientific community and pave the way for future technological advancements."
+  },
+  {
+    id: 2,
+    title: "Advanced Electromagnetic Metamaterials",
+    description:
+      "This research focuses on the development of advanced electromagnetic metamaterials that can manipulate light and electromagnetic waves in novel ways. These materials enable groundbreaking applications in communication, sensing, and energy harvesting.",
+    image: "/research/pic2.jpg",
+    objectives: [
+      "Develop new metamaterial structures",
+      "Investigate novel electromagnetic properties",
+      "Create practical applications for industry"
+    ],
+    methodology:
+      "Our research employs a combination of theoretical modeling, computer simulations, and experimental validation. We utilize state-of-the-art equipment and facilities to conduct our experiments and analyze results.",
+    impact:
+      "This research has the potential to revolutionize various fields, including telecommunications, medical imaging, and energy harvesting. Our findings contribute to the broader scientific community and pave the way for future technological advancements."
+  },
+  {
+    id: 3,
+    title: "Advanced Electromagnetic Metamaterials",
+    description:
+      "This research focuses on the development of advanced electromagnetic metamaterials that can manipulate light and electromagnetic waves in novel ways. These materials enable groundbreaking applications in communication, sensing, and energy harvesting.",
+    image: "/research/pic3.jpg",
+    objectives: [
+      "Develop new metamaterial structures",
+      "Investigate novel electromagnetic properties",
+      "Create practical applications for industry"
+    ],
+    methodology:
+      "Our research employs a combination of theoretical modeling, computer simulations, and experimental validation. We utilize state-of-the-art equipment and facilities to conduct our experiments and analyze results.",
+    impact:
+      "This research has the potential to revolutionize various fields, including telecommunications, medical imaging, and energy harvesting. Our findings contribute to the broader scientific community and pave the way for future technological advancements."
   }
 ]
 
