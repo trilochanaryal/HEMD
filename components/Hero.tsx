@@ -1,22 +1,15 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
-import { heroImages } from "@/consts"
-
-const getRandomImage = () =>
-  heroImages[Math.floor(Math.random() * heroImages.length)]
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+import { heroImages } from '@/consts'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        {/* Optional background grid */}
-        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px]" />
-      </div>
-
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,12 +36,13 @@ const Hero = () => {
           </Link>
         </motion.div>
 
-        {/* Random Image between Research Highlights */}
         <div className="mt-12">
-          <img
-            src={getRandomImage()}
+          <Image
+            src={'/img/pic6.jpg'}
             alt="Random Research Image"
             className="w-full h-96 object-cover rounded-lg shadow-lg"
+            width={1920}
+            height={1080}
           />
         </div>
       </div>
