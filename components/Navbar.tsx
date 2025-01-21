@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { useState } from "react"
-import { Button } from "./ui/button"
-import { ThemeToggle } from "./ThemeToggle"
-import { SearchDialog } from "./SearchDialog"
-import { navItems } from "@/consts"
+import { motion } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useState } from 'react'
+import { Button } from './ui/button'
+import { ThemeToggle } from './ThemeToggle'
+import { SearchDialog } from './SearchDialog'
+import { navItems } from '@/consts'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src={"hemd.webp"}
+                src={'/hemd.webp'}
                 alt="logo"
                 width={40}
                 height={40}
@@ -69,9 +69,9 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <motion.div
           initial={false}
-          animate={isOpen ? "open" : "closed"}
+          animate={isOpen ? 'open' : 'closed'}
           variants={{
-            open: { height: "auto", opacity: 1 },
+            open: { height: 'auto', opacity: 1 },
             closed: { height: 0, opacity: 0 }
           }}
           className="lg:hidden overflow-hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-700"

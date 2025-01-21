@@ -1,41 +1,50 @@
 'use client'
 
-import * as React from "react"
+import * as React from 'react'
 import Image from 'next/image'
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+  CarouselPrevious
+} from '@/components/ui/carousel'
 import { motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
-import { researchCarousel } from "@/consts"
-import {ResearchProject} from "@/types"
+import { researchCarousel } from '@/consts'
+import { ResearchProject } from '@/types'
 
 const ResearchCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel();
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel()
+  const [currentSlide, setCurrentSlide] = React.useState(0)
 
   React.useEffect(() => {
     if (emblaApi) {
-      emblaApi.on("select", () => {
-        setCurrentSlide(emblaApi.selectedScrollSnap());
-      });
+      emblaApi.on('select', () => {
+        setCurrentSlide(emblaApi.selectedScrollSnap())
+      })
     }
-  }, [emblaApi]);
+  }, [emblaApi])
 
   return (
-    <Carousel ref={emblaRef} className="w-full max-w-4xl mx-auto" opts={{ align: "start", loop: true }}>
+    <Carousel
+      ref={emblaRef}
+      className="w-full max-w-4xl mx-auto"
+      opts={{ align: 'start', loop: true }}
+    >
       <CarouselContent>
-        {researchCarousel.map((slide:ResearchProject) => (
+        {researchCarousel.map((slide: ResearchProject) => (
           <CarouselItem key={slide.id}>
             <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <div className="relative aspect-video">
-                  <Image src={slide.image} alt={slide.title} layout="fill" objectFit="cover" />
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill={true}
+                    style={{ objectFit: 'cover' }}
+                  />
                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end">
                     <div className="p-4 sm:p-6 text-white w-full">
                       <motion.h2
@@ -67,7 +76,7 @@ const ResearchCarousel = () => {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  );
-};
+  )
+}
 
-export default ResearchCarousel;
+export default ResearchCarousel

@@ -1,9 +1,9 @@
-import { researchDetails } from "@/consts"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
-import Image from "next/image"
-import { ResearchDetail as ResearchDetailType } from "@/types"
+import { researchDetails } from '@/consts'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ResearchDetail as ResearchDetailType } from '@/types'
 
 export const ResearchDetail = ({ id }: { id: number }) => {
   const item = researchDetails.find((item) => item.id === id)
@@ -27,11 +27,12 @@ export const ResearchDetail = ({ id }: { id: number }) => {
       <Card className="max-w-4xl mx-auto">
         <CardHeader className="p-0">
           <Image
-            src={item.image || "/placeholder.svg"}
+            src={item.image || '/placeholder.svg'}
             alt={item.title}
             width={800}
             height={450}
-            className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-t-lg"
+            style={{ objectFit: 'cover' }}
+            className="w-full h-64 sm:h-80 md:h-96  rounded-t-lg"
           />
         </CardHeader>
         <CardContent className="p-6">

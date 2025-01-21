@@ -1,4 +1,4 @@
-import { research } from "@/consts"
+import { research } from '@/consts'
 import {
   Card,
   CardContent,
@@ -6,10 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle
-} from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import Link from "next/link"
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export function ResearchList() {
   return (
@@ -23,7 +23,8 @@ export function ResearchList() {
                 alt={item.title}
                 width={500}
                 height={300}
-                className="w-full h-48 object-cover rounded-t-lg"
+                style={{ objectFit: 'cover' }}
+                className="w-full h-48 rounded-t-lg"
               />
             </CardHeader>
             <CardContent className="flex-grow p-6">

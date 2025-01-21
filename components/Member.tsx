@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
-import { categorizedMembers } from "@/consts"
-import type { TeamMember } from "@/types"
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
+import { categorizedMembers } from '@/consts'
+import type { TeamMember } from '@/types'
 
 export default function Member() {
   return (
@@ -27,7 +27,7 @@ export default function Member() {
                     <Image
                       src={member.image}
                       alt={member.name}
-                      fill
+                      fill={true}
                       className="object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
