@@ -1,10 +1,6 @@
-const nextConfig = {
-  output: "export" as const,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: { unoptimized: true },
-  pageExtensions: ["js", "jsx", "ts", "tsx"],
-};
+import { NextConfig } from 'next'
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  reactStrictMode: true
+}
+export default nextConfig
